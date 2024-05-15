@@ -1,0 +1,62 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:key="messages_category"
+        app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="login"
+            app:title="@string/login_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="status"
+            app:title="@string/status_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:key="person_category"
+        app:title="@string/person_header"
+        >
+
+        <EditTextPreference
+            app:key="varna"
+            app:title="@string/varna_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="address"
+            app:title="@string/address_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="Needs"
+            app:title="@string/Needs_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="Wishes"
+            app:title="@string/Wishes_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="Aspirations"
+            app:title="@string/Aspirations_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

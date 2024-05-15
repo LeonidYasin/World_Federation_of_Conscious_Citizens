@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainFragment">
+
+    <fragment
+        android:id="@+id/MainFragment"
+        android:name="org.yasin.federationofconsciouscitizensmindmapgraph.MainFragment"
+        android:label="@string/main_fragment_label"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_MainFragment_to_SettingsFragment"
+            app:destination="@id/SettingsFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="org.yasin.federationofconsciouscitizensmindmapgraph.SettingsFragment"
+        android:label="@string/settings_fragment_label"
+        tools:layout="@xml/root_preferences">
+
+        <action
+            android:id="@+id/action_SettingsFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="org.yasin.federationofconsciouscitizensmindmapgraph.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_MainFragment"
+            app:destination="@id/MainFragment" />
+
+    </fragment>
+
+
+        <fragment
+            android:id="@+id/FirstFragment"
+            android:name="org.yasin.federationofconsciouscitizensmindmapgraph.FirstFragment"
+            android:label="@string/first_fragment_label"
+            tools:layout="@layout/fragment_first">
+
+            <action
+                android:id="@+id/action_FirstFragment_to_cardViewScrollingFragment"
+                app:destination="@id/cardViewScrollingFragment" />
+            <action
+                android:id="@+id/action_FirstFragment_to_MainFragment"
+                app:destination="@id/MainFragment"
+                app:popUpTo="@id/MainFragment" />
+        </fragment>
+
+    <fragment
+        android:id="@+id/cardViewScrollingFragment"
+        android:name="org.yasin.federationofconsciouscitizensmindmapgraph.CardViewScrollingFragment"
+        android:label="fragment_card_view_scrolling"
+        tools:layout="@layout/fragment_card_view_scrolling" >
+        <argument
+            android:name="myArgument2"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_cardViewScrollingFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+</navigation>
